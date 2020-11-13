@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/meteostat)](https://www.npmjs.com/meteostat)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/meteostat)](https://www.npmjs.com/meteostat)
-[![NPM](https://img.shields.io/npm/l/meteostat)](LICENSE.md)
+[![NPM](https://img.shields.io/npm/l/meteostat)](LICENSE)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Meteostat is an open platform which provides free access to weather and climate data.
