@@ -1,0 +1,36 @@
+{
+  "name": "meteostat",
+  "version": "0.0.0",
+  "description": "Meteostat is an open platform which provides free access to weather and climate data",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "umd:main": "dist/index.umd.js",
+  "source": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfoel/meteostat.git"
+  },
+  "keywords": [],
+  "author": "Rafael Franco <rafaelfr@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfoel/meteostat/issues"
+  },
+  "homepage": "https://github.com/rfoel/meteostat#readme",
+  "scripts": {
+    "build": "rm -rf dist && microbundle  --tsconfig tsconfig.json",
+    "dev": "microbundle watch --tsconfig tsconfig.json",
+    "lint": "tslint --project \".\""
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.4",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
