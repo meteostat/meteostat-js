@@ -1,4 +1,5 @@
-import axios, { AxiosInstance } from 'axios'
+import fetch from 'node-fetch'
+import * as qs from 'querystring'
 
 import {
   BadRequestError,
@@ -10,34 +11,31 @@ import {
 type HttpMethodTypes = 'post' | 'get'
 
 export class Request {
-  instance: AxiosInstance
+  request: any
 
-  constructor(url: string, apiKey: string) {
-    this.instance = axios.create({
-      baseURL: url,
-      headers: {
-        'x-api-key': apiKey,
-      },
-    })
+  constructor(apiKey: string) {
+    this.request = ({ uri, params }) =>
+      fetch(`https://api.meteostat.net/v2/${uri}?${qs.stringify(params)}`, {
+        headers: { 'x-api-key': apiKey },
+      })
   }
 
   public async makeApiRequest<Response>(
-    method: HttpMethodTypes,
-    url: string,
+    uri: string,
     params?: {},
   ): Promise<Response> {
     try {
-      const response = await this.instance.request({
-        method,
-        url,
+      const response = await this.request({
+        uri,
         params,
       })
-      return response.data.data
+
+      if (!response.ok) throw response
+
+      const { data } = await response.json()
+      return data
     } catch (error) {
-      if (!error.response) {
-        throw error
-      }
-      switch (error.response.status) {
+      switch (error.status) {
         case 400:
           throw new BadRequestError(error)
         case 401:

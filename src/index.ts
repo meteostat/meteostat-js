@@ -8,7 +8,7 @@ export default class Meteostat {
   point: Point
 
   constructor(apiKey: string) {
-    this.request = new Request('https://api.meteostat.net/v2', apiKey)
+    this.request = new Request(apiKey)
     this.stations = new Stations(this.request)
     this.point = new Point(this.request)
   }
