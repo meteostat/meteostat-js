@@ -24,48 +24,42 @@ export class Stations {
 
   async search(params: SearchRequest): Promise<SearchResponse> {
     return await this.request.makeApiRequest<SearchResponse>(
-      'get',
-      '/stations/search',
+      'stations/search',
       params,
     )
   }
 
   async nearby(params: NearbyRequest): Promise<NearbyResponse> {
     return await this.request.makeApiRequest<NearbyResponse>(
-      'get',
-      '/stations/nearby',
+      'stations/nearby',
       params,
     )
   }
 
   async meta(params: MetaRequest): Promise<MetaResponse> {
     return await this.request.makeApiRequest<MetaResponse>(
-      'get',
-      '/stations/meta',
+      'stations/meta',
       params,
     )
   }
 
   async hourly(params: HourlyRequest): Promise<HourlyResponse> {
     return await this.request.makeApiRequest<HourlyResponse>(
-      'get',
-      '/stations/hourly',
+      'stations/hourly',
       params,
     )
   }
 
   async daily(params: DailyRequest): Promise<DailyResponse> {
     return await this.request.makeApiRequest<DailyResponse>(
-      'get',
-      '/stations/daily',
+      'stations/daily',
       params,
     )
   }
 
   async climate(params: ClimateRequest): Promise<ClimateResponse> {
     return await this.request.makeApiRequest<ClimateResponse>(
-      'get',
-      '/stations/climate',
+      'stations/climate',
       params,
     )
   }

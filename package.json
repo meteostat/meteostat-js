@@ -8,22 +8,24 @@
   "source": "src/index.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rfoel/meteostat.git"
+    "url": "git+https://github.com/meteostat/meteostat-js.git"
   },
   "keywords": [],
   "author": "Rafael Franco <rafaelfr@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rfoel/meteostat/issues"
+    "url": "https://github.com/meteostat/meteostat-js/issues"
   },
-  "homepage": "https://github.com/rfoel/meteostat#readme",
+  "homepage": "https://github.com/meteostat/meteostat-js#readme",
   "scripts": {
     "build": "rm -rf dist && microbundle  --tsconfig tsconfig.json",
     "dev": "microbundle watch --tsconfig tsconfig.json",
-    "lint": "tslint --project \".\""
+    "lint": "tslint --project \".\"",
+    "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.21.0"
+    "node-fetch": "^2.6.1",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -32,8 +34,11 @@
     "@semantic-release/github": "^7.1.1",
     "@semantic-release/npm": "^7.0.6",
     "@semantic-release/release-notes-generator": "^9.0.1",
+    "jest": "^26.6.3",
     "microbundle": "^0.12.4",
+    "nock": "^13.0.5",
     "semantic-release": "^17.2.2",
+    "ts-jest": "^26.4.4",
     "tslint": "^6.1.3",
     "typescript": "^4.0.5"
   },
