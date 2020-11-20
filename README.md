@@ -275,7 +275,7 @@ Returns an array with the following for each month:
 #### Example
 
 ```javascript
-meteostat.point.climate({
+meteostat.stations.climate({
   station: 83779,
 })
 ```
