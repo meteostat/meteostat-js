@@ -7,13 +7,16 @@ import {
   UnauthorizedError,
 } from './error'
 
-type HttpMethodTypes = 'post' | 'get'
+type RequestParams = {
+  uri: string
+  params: any
+}
 
 export class Request {
   request: any
 
   constructor(apiKey: string) {
-    this.request = ({ uri, params }) => {
+    this.request = ({ uri, params }: RequestParams): void => {
       const query: string = new URLSearchParams(params).toString()
       return fetch(`https://api.meteostat.net/v2/${uri}?${query}`, {
         headers: { 'x-api-key': apiKey },
@@ -31,7 +34,9 @@ export class Request {
         params,
       })
 
-      if (!response.ok) throw response
+      if (!response.ok) {
+        throw response
+      }
 
       const { data } = await response.json()
       return data
