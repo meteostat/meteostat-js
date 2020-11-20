@@ -9,7 +9,9 @@ Meteostat is an open platform which provides free access to weather and climate 
 
 ## Documentation
 
-See the [JSON API docs](https://dev.meteostat.net/api/) for more information about the API.
+Meteostat provides a convenient JavaScript wrapper for its JSON API.
+
+See the [JSON API docs](https://dev.meteostat.net/api) for more information about the API.
 
 ## Installation
 
@@ -17,13 +19,17 @@ To install the package, run:
 
 ```
 npm install meteostat
-# or
+```
+
+or
+
+```
 yarn add meteostat
 ```
 
 ## Usage
 
-All you need to get started is your api key, which can be generated [here](https://auth.meteostat.net/). Create a client with the given api key:
+All you need to get started is an API key, which can be generated [here](https://auth.meteostat.net/). Once you have your personal API key, you can create a client:
 
 ```javascript
 import Meteostat from 'meteostat'
@@ -56,7 +62,11 @@ const meteostat = new Meteostat('YOUR_API_KEY_HERE')
 
 ## <a name="stations"></a> Weather Stations
 
+The methods described in this chapter provide access to meta and weather data of actual weather stations. Alternatively, you can query data by geographical coordinates using [point data](#point).
+
 ### <a name="stations_search"></a> Finding Weather Stations
+
+This method provides access to the data made available through the [_stations/search_](https://dev.meteostat.net/api/stations/search) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
 
 #### Parameters
 
@@ -91,6 +101,8 @@ meteostat.stations.search({ query: 'Sao Paulo' })
 
 ### <a name="stations_nearby"></a> Nearby Weather Stations
 
+This method provides access to the data made available through the [_stations/nearby_](https://dev.meteostat.net/api/stations/nearby) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
+
 #### Parameters
 
 | Parameter | Description                           | Types   | Required | Default |
@@ -119,6 +131,8 @@ meteostat.stations.nearby({
 ```
 
 ### <a name="stations_meta"></a> Meta Data
+
+This method provides access to the data made available through the [_stations/meta_](https://dev.meteostat.net/api/stations/meta) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
 
 #### Parameters
 
@@ -155,6 +169,8 @@ meteostat.stations.meta({
 ```
 
 ### <a name="stations_hourly"></a> Hourly Data
+
+This method provides access to the data made available through the [_stations/hourly_](https://dev.meteostat.net/api/stations/hourly) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
 
 #### Parameters
 
@@ -196,6 +212,8 @@ meteostat.stations.hourly({
 
 ### <a name="stations_daily"></a> Daily Data
 
+This method provides access to the data made available through the [_stations/daily_](https://dev.meteostat.net/api/stations/daily) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
+
 #### Parameters
 
 | Parameter | Description                                      | Type   | Required | Default |
@@ -232,6 +250,8 @@ meteostat.stations.daily({
 
 ### <a name="stations_climate"></a> Climate Normals
 
+This method provides access to the data made available through the [_stations/climate_](https://dev.meteostat.net/api/stations/climate) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
+
 #### Parameters
 
 | Parameter | Description            | Type   | Required | Default |
@@ -262,7 +282,11 @@ meteostat.point.climate({
 
 ## <a name="point"></a> Point Data
 
+The methods described in this chapter provide access to meteorological data through geographical coordinates.
+
 ### <a name="point_hourly"></a> Hourly Data
+
+This method provides access to the data made available through the [_point/hourly_](https://dev.meteostat.net/api/point/hourly) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
 
 #### Parameters
 
@@ -306,6 +330,8 @@ meteostat.point.hourly({
 
 ### <a name="point_daily"></a> Daily Data
 
+This method provides access to the data made available through the [_point/daily_](https://dev.meteostat.net/api/point/daily) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
+
 #### Parameters
 
 | Parameter | Description                                      | Type    | Required | Default |
@@ -344,6 +370,8 @@ meteostat.point.daily({
 ```
 
 ### <a name="point_climate"></a> Climate Normals
+
+This method provides access to the data made available through the [_point/climate_](https://dev.meteostat.net/api/point/climate) endpoint. The method takes the same parameters and uses the same response format as the corresponding endpoint.
 
 #### Parameters
 
