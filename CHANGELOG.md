@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/meteostat/meteostat-js/compare/v1.0.1...v1.0.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* remove querystring depency ([c14c0bc](https://github.com/meteostat/meteostat-js/commit/c14c0bc0c233f3e0cd6423fc0698b41930aff64b))
+
 ## [1.0.1](https://github.com/meteostat/meteostat-js/compare/v1.0.0...v1.0.1) (2020-11-19)
 
 
