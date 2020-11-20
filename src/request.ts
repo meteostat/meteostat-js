@@ -1,5 +1,4 @@
 import fetch from 'node-fetch'
-import * as qs from 'querystring'
 
 import {
   BadRequestError,
@@ -8,21 +7,26 @@ import {
   UnauthorizedError,
 } from './error'
 
-type HttpMethodTypes = 'post' | 'get'
+type RequestParams = {
+  uri: string
+  params: any
+}
 
 export class Request {
   request: any
 
   constructor(apiKey: string) {
-    this.request = ({ uri, params }) =>
-      fetch(`https://api.meteostat.net/v2/${uri}?${qs.stringify(params)}`, {
+    this.request = ({ uri, params }: RequestParams): void => {
+      const query: string = new URLSearchParams(params).toString()
+      return fetch(`https://api.meteostat.net/v2/${uri}?${query}`, {
         headers: { 'x-api-key': apiKey },
       })
+    }
   }
 
   public async makeApiRequest<Response>(
     uri: string,
-    params?: {},
+    params: any,
   ): Promise<Response> {
     try {
       const response = await this.request({
@@ -30,7 +34,9 @@ export class Request {
         params,
       })
 
-      if (!response.ok) throw response
+      if (!response.ok) {
+        throw response
+      }
 
       const { data } = await response.json()
       return data
