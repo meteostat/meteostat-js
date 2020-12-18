@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/meteostat/meteostat-js/compare/v1.0.2...v1.1.0) (2020-12-18)
+
+
+### Features
+
+* responses now reflects the api ([9d0deb6](https://github.com/meteostat/meteostat-js/commit/9d0deb651a7d2e2e102ce1909318cb0d0ced85c8))
+
 ## [1.0.2](https://github.com/meteostat/meteostat-js/compare/v1.0.1...v1.0.2) (2020-11-20)
 
 
