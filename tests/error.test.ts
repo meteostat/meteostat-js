@@ -5,7 +5,7 @@ import {
   ServiceTemporarilyUnavailableError,
   TooManyRequestsError,
   UnauthorizedError,
-} from '../src/error'
+} from '../src/resources/error'
 
 const scope = nock('https://api.meteostat.net/v2')
 

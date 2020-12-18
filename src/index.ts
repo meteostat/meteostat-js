@@ -1,6 +1,8 @@
-import { Point } from './point'
 import { Request } from './request'
-import { Stations } from './stations'
+import { Point } from './resources/point'
+import { Stations } from './resources/stations'
+
+export * from './models'
 
 export default class Meteostat {
   private readonly request: Request

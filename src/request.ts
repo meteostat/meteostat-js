@@ -5,7 +5,7 @@ import {
   ServiceTemporarilyUnavailableError,
   TooManyRequestsError,
   UnauthorizedError,
-} from './error'
+} from './resources/error'
 
 type RequestParams = {
   uri: string
