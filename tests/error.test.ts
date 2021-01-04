@@ -1,5 +1,5 @@
 import * as nock from 'nock'
-import Meteostat from '../src'
+import { Meteostat } from '../src'
 import {
   BadRequestError,
   ServiceTemporarilyUnavailableError,
