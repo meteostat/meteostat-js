@@ -4,7 +4,7 @@ import { Stations } from './resources/stations'
 
 export * from './models'
 
-export default class Meteostat {
+export class Meteostat {
   private readonly request: Request
   stations: Stations
   point: Point
