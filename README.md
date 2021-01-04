@@ -32,7 +32,7 @@ yarn add meteostat
 All you need to get started is an API key, which can be generated [here](https://auth.meteostat.net/). Once you have your personal API key, you can create a client:
 
 ```javascript
-import Meteostat from 'meteostat'
+import { Meteostat } from 'meteostat'
 
 const meteostat = new Meteostat('YOUR_API_KEY_HERE')
 
