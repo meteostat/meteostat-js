@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/meteostat/meteostat-js/compare/v1.1.0...v1.1.1) (2021-01-04)
+
+
+### Bug Fixes
+
+* export Meteostat class instead of default ([c18964a](https://github.com/meteostat/meteostat-js/commit/c18964af6d2dd45dbf694686001fa824bc882943))
+
 # [1.1.0](https://github.com/meteostat/meteostat-js/compare/v1.0.2...v1.1.0) (2020-12-18)
 
 
