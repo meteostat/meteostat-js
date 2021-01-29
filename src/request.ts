@@ -1,5 +1,6 @@
-import fetch from 'node-fetch'
+import fetch, { Response } from 'node-fetch'
 
+import { MeteostatResponse } from './models'
 import {
   BadRequestError,
   ServiceTemporarilyUnavailableError,
@@ -16,7 +17,7 @@ export class Request {
   request: any
 
   constructor(apiKey: string) {
-    this.request = ({ uri, params }: RequestParams): void => {
+    this.request = ({ uri, params }: RequestParams): Promise<Response> => {
       const query: string = new URLSearchParams(params).toString()
       return fetch(`https://api.meteostat.net/v2/${uri}?${query}`, {
         headers: { 'x-api-key': apiKey },
@@ -24,10 +25,10 @@ export class Request {
     }
   }
 
-  public async makeApiRequest<Response>(
+  public async makeApiRequest(
     uri: string,
     params: any,
-  ): Promise<Response> {
+  ): Promise<MeteostatResponse> {
     try {
       const response = await this.request({
         uri,
@@ -38,8 +39,7 @@ export class Request {
         throw response
       }
 
-      const { data } = await response.json()
-      return data
+      return response.json()
     } catch (error) {
       switch (error.status) {
         case 400:

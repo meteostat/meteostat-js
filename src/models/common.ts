@@ -23,6 +23,7 @@ export interface Name {
 
 export interface MeteostatResponse {
   meta: Meta
+  data: any
 }
 
 export enum WeatherConditionCode {

@@ -16,23 +16,14 @@ export class Point {
   }
 
   async hourly(params: PointHourlyRequest): Promise<PointHourlyResponse> {
-    return await this.request.makeApiRequest<PointHourlyResponse>(
-      'point/hourly',
-      params,
-    )
+    return await this.request.makeApiRequest('point/hourly', params)
   }
 
   async daily(params: PointDailyRequest): Promise<PointDailyResponse> {
-    return await this.request.makeApiRequest<PointDailyResponse>(
-      'point/daily',
-      params,
-    )
+    return await this.request.makeApiRequest('point/daily', params)
   }
 
   async climate(params: PointClimateRequest): Promise<PointClimateResponse> {
-    return await this.request.makeApiRequest<PointClimateResponse>(
-      'point/climate',
-      params,
-    )
+    return await this.request.makeApiRequest('point/climate', params)
   }
 }

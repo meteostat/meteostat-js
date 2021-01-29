@@ -22,46 +22,28 @@ export class Stations {
   }
 
   async search(params: StationsSearchRequest): Promise<StationsSearchResponse> {
-    return await this.request.makeApiRequest<StationsSearchResponse>(
-      'stations/search',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/search', params)
   }
 
   async nearby(params: StationsNearbyRequest): Promise<StationsNearbyResponse> {
-    return await this.request.makeApiRequest<StationsNearbyResponse>(
-      'stations/nearby',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/nearby', params)
   }
 
   async meta(params: StationsMetaRequest): Promise<StationsMetaResponse> {
-    return await this.request.makeApiRequest<StationsMetaResponse>(
-      'stations/meta',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/meta', params)
   }
 
   async hourly(params: StationsHourlyRequest): Promise<StationsHourlyResponse> {
-    return await this.request.makeApiRequest<StationsHourlyResponse>(
-      'stations/hourly',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/hourly', params)
   }
 
   async daily(params: StationsDailyRequest): Promise<StationsDailyResponse> {
-    return await this.request.makeApiRequest<StationsDailyResponse>(
-      'stations/daily',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/daily', params)
   }
 
   async climate(
     params: StationsClimateRequest,
   ): Promise<StationsClimateResponse> {
-    return await this.request.makeApiRequest<StationsClimateResponse>(
-      'stations/climate',
-      params,
-    )
+    return await this.request.makeApiRequest('stations/climate', params)
   }
 }
