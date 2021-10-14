@@ -1,4 +1,4 @@
-import * as fetch from 'isomorphic-fetch'
+import 'isomorphic-fetch'
 
 import { MeteostatResponse } from './models'
 import {
