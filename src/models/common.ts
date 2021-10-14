@@ -1,4 +1,8 @@
 export interface Inventory {
+  model?: {
+    start: string
+    end: string
+  }
   hourly?: {
     start: string
     end: string
@@ -7,8 +11,20 @@ export interface Inventory {
     start: string
     end: string
   }
+  monthly?: { start: number; end: number }
+  normals?: { start: number; end: number }
 }
 
+export interface Identifier {
+  national: string
+  wmo: string
+  icao: string
+}
+export interface Location {
+  latitude: number
+  longitude: number
+  elevation: number
+}
 export interface Meta {
   source?: string
   start?: number
