@@ -26,6 +26,8 @@ export interface MeteostatResponse {
   data: any
 }
 
+export type Units = 'metric' | 'imperial' | 'scientific'
+
 export enum WeatherConditionCode {
   Clear = 1,
   Fair = 2,
