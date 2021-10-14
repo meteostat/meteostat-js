@@ -6,12 +6,12 @@ export * from './models'
 
 export class Meteostat {
   private readonly request: Request
-  stations: Stations
   point: Point
+  stations: Stations
 
   constructor(apiKey: string) {
     this.request = new Request(apiKey)
-    this.stations = new Stations(this.request)
     this.point = new Point(this.request)
+    this.stations = new Stations(this.request)
   }
 }
