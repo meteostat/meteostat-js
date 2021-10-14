@@ -1,6 +1,6 @@
 import { Units, WeatherConditionCode } from './common'
 
-import { Inventory, MeteostatResponse, Name } from '.'
+import { Identifier, Inventory, MeteostatResponse, Name } from '.'
 
 export interface StationsNearbyRequest {
   [key: string]: string | number
@@ -31,13 +31,8 @@ export interface StationsMetaResponse extends MeteostatResponse {
     name: Name
     country: string
     region: string
-    national: string
-    wmo: string
-    icao: string
-    iata: string
-    latitude: number
-    longitude: number
-    elevation: number
+    identifier: Identifier
+    location: Location
     timezone: string
     inventory: Inventory
   }
