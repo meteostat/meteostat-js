@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/meteostat/meteostat-js/compare/v1.1.2...v2.0.0) (2021-10-14)
+
+
+### Features
+
+* migrate to rapidapi ([0952189](https://github.com/meteostat/meteostat-js/commit/09521893c7896d759ed7d8b1d2cc08d2bdc04867))
+
+
+### BREAKING CHANGES
+
+* we are changing the api provider
+so the meteostat endpoint will be replaced with a
+rapidapi endpoint intead, changing its api key.
+
 ## [1.1.2](https://github.com/meteostat/meteostat-js/compare/v1.1.1...v1.1.2) (2021-01-29)
 
 

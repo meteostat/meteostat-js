@@ -1,6 +1,6 @@
 {
   "name": "meteostat",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Meteostat is an open platform which provides free access to weather and climate data",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
